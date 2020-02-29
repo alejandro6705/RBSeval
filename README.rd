@@ -42,4 +42,4 @@
     Bonde MT, Pedersen M, Klausen MS, Jensen SI, Wulff T, Harrison S, Nielsen AT, Herrgård MJ,
     Sommer MO.
     Nat Methods. 2016 Mar;13(3):233-6.
-[3] Improving prediction accuracy of protein abundance using accessibility of mRNA (submitted).
+[3] Improving the prediction accuracy of protein abundance inEscherichia coliusing mRNA accessibility (submitted).
