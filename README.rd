@@ -16,7 +16,7 @@
  perl RBSeval.pl [5'-UTR (fasta file)] [CDS (fasta file)] [run_raccess_contrafold (binary file)]
 
 <<Example>>
- perl RBSeval.pl example/test_cds.fasta  example/test_utr.fasta /your_path_to_raccess/src/raccess/run_rccess_contrafold
+ perl RBSeval.pl example/test_utr.fasta  example/test_cds.fasta /your_path_to_raccess/src/raccess/run_rccess_contrafold
 
 <<Output>>
  accC            : -2.67845
