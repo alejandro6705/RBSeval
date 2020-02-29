@@ -3,7 +3,7 @@
  RBSeval predicts protein abundance from mRNA sequence around the start codon.
  In this method, protain abundance is estimated based on the accessibility around
  the start coodon and the predicted activity of the Shine-Dalgarno sequence.  
- The former and latter is calculated by the Raccess program [1] and the emopec method [2],
+ The former and latter is calculated by the Raccess program [1] and the EMOPEC method [2],
  respectively. RBSeval combines the above two features using the linear regression and 
  outputs a predicted protein abundance value.
 
@@ -20,14 +20,14 @@
 
 <<Output>>
  accC            : -2.67845
- emopec score    : 1.62256087658972
+ EMOPEC score    : 1.62256087658972
  predicted SD    : ACGACA
  RBSeval score   : 7.16090606082678
  Exp. level      : Very low (Bottom 30 percentile)
 
- "accC" is the accessibility around the start codon. "emopec sore" is the predicted activity of 
+ "accC" is the accessibility around the start codon. "EMOPEC sore" is the predicted activity of 
  the Shine-Dalgarno sequence. "predicted SD" is the plausible SD sequence predicted by the
- emopec method. "RBSeval score" is a predicted protein abundance value. "Exp. level" is the
+ EMOPEC method. "RBSeval score" is a predicted protein abundance value. "Exp. level" is the
  protein expression level assigned based on the RBSeval scores for a dataset used to train
  RBSeval (see [3] for details of the dataset). 
 
