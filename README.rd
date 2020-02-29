@@ -1,0 +1,45 @@
+<<RBSeval>>
+
+ RBSeval predicts protein abundance from mRNA sequence around the start codon.
+ In this method, protain abundance is estimated based on the accessibility around
+ the start coodon and the predicted activity of the Shine-Dalgarno sequence.  
+ The former and latter is calculated by the Raccess program [1] and the emopec method [2],
+ respectively. RBSeval combines the above two features using the linear regression and 
+ outputs a predicted protein abundance value.
+
+<<Prerequisite>>
+ RBSeval uses the Raccess program for calculating accessibility around the start
+ codon. You must have the Raccess program enabled before using the RBSeval.
+ Raccess is currently available from https://github.com/gterai/raccess.
+
+<<Usage>>
+ perl RBSeval.pl [5'-UTR (fasta file)] [CDS (fasta file)] [run_raccess_contrafold (binary file)]
+
+<<Example>>
+ perl RBSeval.pl example/test_cds.fasta  example/test_utr.fasta /your_path_to_raccess/src/raccess/run_rccess_contrafold
+
+<<Output>>
+ accC            : -2.67845
+ emopec score    : 1.62256087658972
+ predicted SD    : ACGACA
+ RBSeval score   : 7.16090606082678
+ Exp. level      : Very low (Bottom 30 percentile)
+
+ "accC" is the accessibility around the start codon. "emopec sore" is the predicted activity of 
+ the Shine-Dalgarno sequence. "predicted SD" is the plausible SD sequence predicted by the
+ emopec method. "RBSeval score" is a predicted protein abundance value. "Exp. level" is the
+ protein expression level assigned based on the RBSeval scores for a dataset used to train
+ RBSeval (see [3] for details of the dataset). 
+
+<<Citation>>
+ Please site [3] when you use RNAeval.
+
+<<Reference>>
+[1] A detailed investigation of accessibilities around target sites of siRNAs and miRNAs.
+    Kiryu H, Terai G, Imamura O, Yoneyama H, Suzuki K, Asai K.
+    Bioinformatics. 2011 Jul 1;27(13):1788-97.
+[2] Predictable tuning of protein expression in bacteria.
+    Bonde MT, Pedersen M, Klausen MS, Jensen SI, Wulff T, Harrison S, Nielsen AT, Herrgård MJ,
+    Sommer MO.
+    Nat Methods. 2016 Mar;13(3):233-6.
+[3] Improving prediction accuracy of protein abundance using accessibility of mRNA (submitted).
